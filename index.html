@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Mufeed | Web &amp; Software Developer Portfolio</title>
+  <meta name="description" content="Muhammad Mufeed - BCA Student, Web Developer, PHP Developer and Frontend Developer. Explore my projects, skills, education and achievements.">
+  <meta name="keywords" content="Muhammad Mufeed, Web Developer, PHP Developer, Frontend Developer, Software Developer, BCA Student, Portfolio">
+  <meta name="author" content="Muhammad Mufeed">
+  <meta name="theme-color" content="#0F172A">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muhammad Mufeed | Web &amp; Software Developer Portfolio">
+  <meta property="og:description" content="BCA Student, Web Developer and Software Developer Portfolio.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- ===================== LOADER ===================== -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">Welcome</div>
+      <div class="loader-bar"><span></span></div>
+      <p class="loader-text">Loading Experience...</p>
+    </div>
+  </div>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- ===================== ANIMATED BACKGROUND ===================== -->
+  <div class="bg-animation" id="bgAnimation" aria-hidden="true"></div>
+
+  <!-- ===================== HEADER / NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Mufeed<span class="dot">.</span></a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
+          <li><a href="#about" class="nav-link" data-nav>About</a></li>
+          <li><a href="#education" class="nav-link" data-nav>Education</a></li>
+          <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+          <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+          <!-- <li><a href="#achievements" class="nav-link" data-nav>Achievements</a></li> -->
+          <li><a href="#certifications" class="nav-link" data-nav>Certifications</a></li>
+          <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 18a6 6 0 100-12 6 6 0 000 12zm0-16a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm0 18a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM4.22 4.22a1 1 0 011.42 0l.7.71a1 1 0 11-1.42 1.42l-.7-.71a1 1 0 010-1.42zm14.36 14.36a1 1 0 011.42 0l.7.71a1 1 0 11-1.42 1.42l-.7-.71a1 1 0 010-1.42zM1 12a1 1 0 011-1h1a1 1 0 110 2H2a1 1 0 01-1-1zm18 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1zM4.22 19.78a1 1 0 010-1.42l.7-.71a1 1 0 111.42 1.42l-.7.71a1 1 0 01-1.42 0zM18.58 5.64a1 1 0 010-1.42l.7-.71a1 1 0 111.42 1.42l-.7.71a1 1 0 01-1.42 0z"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.742 13.045a8.088 8.088 0 01-2.077.271c-4.454 0-8.06-3.606-8.06-8.06 0-1.263.29-2.458.81-3.522a.75.75 0 00-.919-1.023A10.05 10.05 0 002 10.5C2 16.299 6.701 21 12.5 21a10.05 10.05 0 009.229-6.096.75.75 0 00-1.023-.919 8.06 8.06 0 01-.964.06z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===================== HOME / HERO SECTION ===================== -->
+    <section id="home" class="hero section">
+      <div class="hero-shapes" aria-hidden="true">
+        <span class="shape shape1"></span>
+        <span class="shape shape2"></span>
+        <span class="shape shape3"></span>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-text reveal-up">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Muhammad Mufeed</h1>
+          <h2 class="hero-role">
+            I'm a <span class="typing-text" id="typingText"></span><span class="cursor-blink">|</span>
+          </h2>
+          <p class="hero-desc">
+            A passionate BCA student and aspiring software developer who loves crafting clean,
+            responsive, and user-friendly web applications. Always exploring new technologies
+            to build innovative digital solutions.
+          </p>
+          <div class="hero-buttons">
+            <a href="https://drive.google.com/file/d/1sc2rCqSbMI0zsyy-1xXszRq6buZCqOxk/view?usp=drivesdk" class="btn btn-primary ripple" download>
+              <span>Download Resume</span>
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 2h14v2H5v-2z"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-outline ripple">
+              <span>Contact Me</span>
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/mufeedmx" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.73.8 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.42.36.78 1.08.78 2.18 0 1.57-.02 2.84-.02 3.23 0 .3.2.66.79.55A10.52 10.52 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-mufeed-a0011737a?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="mufeedmx@gmail.com" class="social-icon" aria-label="Email" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 4h20a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.01L12 13 22 6.01V6H2zm20 12V8.24l-9.4 6.68a1 1 0 01-1.2 0L2 8.24V18h20z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image reveal-up delay-2">
+          <div class="hero-image-wrap">
+            <div class="hero-image-glow"></div>
+            <img src="assets/images/profile-img.png" alt="Muhammad Mufeed profile photo" class="profile-img" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect width=%22400%22 height=%22400%22 fill=%22%23233150%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2242%22 fill=%22%2338BDF8%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22 font-family=%22sans-serif%22%3EMM%3C/text%3E%3C/svg%3E'">
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-heading reveal-up">
+          <p class="section-tag">Get To Know Me</p>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text reveal-up">
+            <p>
+              Muhammad Mufeed, a Bachelor of Computer Applications (BCA) student passionate about
+              web development and software engineering. He enjoys building responsive, user-friendly
+              web applications and continuously learning modern technologies to stay ahead in the
+              ever-evolving tech landscape.
+            </p>
+            <p>
+              With a strong foundation in problem-solving and a keen eye for detail, Mufeed thrives
+              in collaborative environments where teamwork and clear communication drive great results.
+              He is highly adaptable, quick to pick up new tools and frameworks, and deeply enthusiastic
+              about creating innovative software solutions that make a real difference.
+            </p>
+            <ul class="about-highlights">
+              <li><span>💡</span> Strong Problem-Solving Ability</li>
+              <li><span>🤝</span> Team Player &amp; Communicator</li>
+              <li><span>⚡</span> Adaptable &amp; Fast Learner</li>
+              <li><span>🚀</span> Passionate About Innovation</li>
+            </ul>
+          </div>
+
+          <div class="about-stats reveal-up delay-2">
+            <div class="stat-card glass">
+              <h3 class="stat-number" data-target="12">0</h3>
+              <p class="stat-label">Projects Completed</p>
+            </div>
+            <div class="stat-card glass">
+              <h3 class="stat-number" data-target="15">0</h3>
+              <p class="stat-label">Technical Skills</p>
+            </div>
+            <div class="stat-card glass">
+              <h3 class="stat-number" data-target="3">0</h3>
+              <p class="stat-label">Certifications</p>
+            </div>
+            <!-- <div class="stat-card glass">
+              <h3 class="stat-number" data-target="2">0</h3>
+              <p class="stat-label">Achievements</p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION SECTION ===================== -->
+    <section id="education" class="section education">
+      <div class="container">
+        <div class="section-heading reveal-up">
+          <p class="section-tag">My Academic Journey</p>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2023 – 2026</span>
+              <h3>Bachelor of Computer Applications (BCA)</h3>
+              <p class="timeline-place">Mangalore University</p>
+              <p class="timeline-desc">
+                Pursuing a comprehensive undergraduate program covering programming fundamentals,
+                data structures, database management, web technologies, and software engineering
+                principles, with hands-on project-based learning.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-up delay-2">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2021 – 2023</span>
+              <h3>Pre-University Course (Commerce)</h3>
+              <p class="timeline-place">Pre-University College</p>
+              <p class="timeline-desc">
+                Completed higher secondary education with a focus on Commerce, building a strong
+                foundation in analytical thinking, accounting principles, and business fundamentals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS SECTION ===================== -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-heading reveal-up">
+          <p class="section-tag">What I Bring To The Table</p>
+          <h2 class="section-title">Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-category glass reveal-up">
+            <h3 class="skill-cat-title">Frontend</h3>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>HTML</span><span>95%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>CSS</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>JavaScript</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Bootstrap</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+          </div>
+
+          <!-- Programming Languages -->
+          <div class="skill-category glass reveal-up delay-1">
+            <h3 class="skill-cat-title">Programming Languages</h3>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>PHP</span><span>88%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Python</span><span>75%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>C</span><span>70%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skill-category glass reveal-up delay-2">
+            <h3 class="skill-cat-title">Database</h3>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>SQL Server</span><span>82%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>MongoDB (Basic)</span><span>60%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="60"></div></div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category glass reveal-up delay-3">
+            <h3 class="skill-cat-title">Tools</h3>
+            <div class="tools-grid">
+              <span class="tool-chip">Git</span>
+              <span class="tool-chip">GitHub</span>
+              <span class="tool-chip">VS Code</span>
+              <span class="tool-chip">SSMS</span>
+              <span class="tool-chip">XAMPP</span>
+              <span class="tool-chip">phpMyAdmin</span>
+              <span class="tool-chip">MS Word</span>
+              <span class="tool-chip">MS Excel</span>
+              <span class="tool-chip">MS PowerPoint</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-category glass reveal-up delay-4">
+            <h3 class="skill-cat-title">Soft Skills</h3>
+            <div class="tools-grid">
+              <span class="tool-chip">Communication</span>
+              <span class="tool-chip">Teamwork</span>
+              <span class="tool-chip">Problem Solving</span>
+              <span class="tool-chip">Time Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS SECTION ===================== -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-heading reveal-up">
+          <p class="section-tag">My Recent Work</p>
+          <h2 class="section-title">Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card glass reveal-up">
+            <div class="project-card-glow"></div>
+            <div class="project-icon">🚗</div>
+            <h3>Car Rental System</h3>
+            <span class="project-tech">PHP</span>
+            <p class="project-desc">
+              A full-featured car rental management platform that allows users to browse available
+              vehicles, check pricing, and place rental bookings online, while giving administrators
+              tools to manage inventory, bookings, and customer records efficiently.
+            </p>
+            <p class="project-features">
+              <strong>Features:</strong> Vehicle listing &amp; search, booking management, admin dashboard,
+              secure login system, and dynamic pricing calculation.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal-up delay-1">
+            <div class="project-card-glow"></div>
+            <div class="project-icon">🚌</div>
+            <h3>Bus Booking System</h3>
+            <span class="project-tech">PHP</span>
+            <p class="project-desc">
+              An online bus ticket booking application that enables passengers to search routes,
+              select seats, and confirm bookings seamlessly, complemented by an administrative panel
+              for managing schedules, fares, and bus fleets.
+            </p>
+            <p class="project-features">
+              <strong>Features:</strong> Seat selection, route &amp; schedule management, ticket generation,
+              and admin control panel.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal-up delay-2">
+            <div class="project-card-glow"></div>
+            <div class="project-icon">🏏</div>
+            <h3>Live Cricket Score Application</h3>
+            <span class="project-tech">Node.js</span>
+            <p class="project-desc">
+              A real-time cricket score tracking application built with Node.js that fetches and
+              displays live match updates, scorecards, and match statistics with a clean, fast, and
+              responsive interface.
+            </p>
+            <p class="project-features">
+              <strong>Features:</strong> Real-time score updates, live match listings, detailed
+              scorecards, and responsive UI.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal-up delay-3">
+            <div class="project-card-glow"></div>
+            <div class="project-icon">🛒</div>
+            <h3>Supermarket Order &amp; Delivery System</h3>
+            <span class="project-tech">PHP</span>
+            <p class="project-desc">
+              A complete grocery ordering platform where customers can browse products, add items
+              to cart, and place delivery orders online, backed by an admin system for inventory,
+              order tracking, and delivery management.
+            </p>
+            <p class="project-features">
+              <strong>Features:</strong> Product catalog, shopping cart, order tracking, and
+              inventory management dashboard.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal-up delay-4">
+            <div class="project-card-glow"></div>
+            <div class="project-icon">💬</div>
+            <h3>Real-Time Chat Application</h3>
+            <span class="project-tech">PHP</span>
+            <p class="project-desc">
+              A dynamic real-time messaging application that allows users to communicate instantly
+              in a clean and intuitive chat interface, designed with a focus on responsiveness and
+              smooth user experience.
+            </p>
+            <p class="project-features">
+              <strong>Features:</strong> Instant messaging, user authentication, chat history, and
+              responsive chat window.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS SECTION ===================== -->
+    <!-- <section id="achievements" class="section achievements">
+      <div class="container">
+        <div class="section-heading reveal-up">
+          <p class="section-tag">Milestones</p>
+          <h2 class="section-title">Achievements</h2>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-card glass reveal-up">
+            <div class="achievement-icon">🏆</div>
+            <h3>First Place – Intercollege Coding Competition</h3>
+            <p>
+              Secured first place among competing colleges in a fast-paced coding competition,
+              demonstrating strong algorithmic thinking, efficient problem-solving, and the ability
+              to write optimized code under time constraints.
+            </p>
+          </div>
+
+          <div class="achievement-card glass reveal-up delay-2">
+            <div class="achievement-icon">🎨</div>
+            <h3>First Place – Intercollege Web Designing Competition</h3>
+            <p>
+              Awarded first place for designing a visually appealing and highly functional website,
+              showcasing creativity, strong UI/UX sensibility, and technical proficiency in front-end
+              development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ===================== CERTIFICATIONS SECTION ===================== -->
+    <section id="certifications" class="section certifications">
+      <div class="container">
+        <div class="section-heading reveal-up">
+          <p class="section-tag">Verified Learning</p>
+          <h2 class="section-title">Certifications</h2>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card glass reveal-up">
+            <div class="cert-badge">🎯</div>
+            <h3>UI/UX Fundamentals</h3>
+            <p>
+              A certification covering the core principles of user interface and user experience
+              design, including wireframing, usability heuristics, and modern design workflows for
+              building intuitive digital products.
+            </p>
+          </div>
+
+          <div class="cert-card glass reveal-up delay-1">
+            <div class="cert-badge">📊</div>
+            <h3>Data Analyst</h3>
+            <p>
+              A certification focused on data analysis fundamentals, covering data cleaning,
+              visualization, and interpretation techniques used to derive meaningful insights
+              from raw datasets.
+            </p>
+          </div>
+
+          <div class="cert-card glass reveal-up delay-2">
+            <div class="cert-badge">💻</div>
+            <h3>Frontend Developer</h3>
+            <p>
+              A certification validating proficiency in front-end web development, including HTML,
+              CSS, and JavaScript, with an emphasis on building responsive and accessible user
+              interfaces.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-heading reveal-up">
+          <p class="section-tag">Let's Talk</p>
+          <h2 class="section-title">Contact Me</h2>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info reveal-up">
+            <h3>Contact Information</h3>
+            <p class="contact-intro">
+              Feel free to reach out for collaborations, opportunities, or just a friendly chat
+              about technology and development.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="contact-icon">👤</span>
+                <div><strong>Name</strong><p>Muhammad Mufeed</p></div>
+              </li>
+              <li>
+                <span class="contact-icon">📞</span>
+                <div><strong>Phone</strong><p><a href="tel:#">+91 9731845818</a></p></div>
+              </li>
+              <li>
+                <span class="contact-icon">✉️</span>
+                <div><strong>Email</strong><p><a href="mailto:#">mufeedmx@gmail.com</a></p></div>
+              </li>
+              <li>
+                <span class="contact-icon">📍</span>
+                <div><strong>Address</strong><p>Manglore,Karnataka,India</p></div>
+              </li>
+              <li>
+                <span class="contact-icon">🐙</span>
+                <div><strong>GitHub</strong><p><a href="#" target="_blank" rel="noopener">mufeedmx</a></p></div>
+              </li>
+              <li>
+                <span class="contact-icon">💼</span>
+                <div><strong>LinkedIn</strong><p><a href="#" target="_blank" rel="noopener">mufeedmx</a></p></div>
+              </li>
+            </ul>
+
+            <!-- <div class="map-placeholder glass">
+              <span>📍 Map Location Placeholder</span>
+            </div> -->
+          </div>
+
+          <div class="contact-form-wrap reveal-up delay-2">
+            <form id="contactForm" class="contact-form glass" novalidate>
+              <h3>Send Me a Message</h3>
+
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <span class="error-msg" id="nameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                <span class="error-msg" id="emailError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject">
+                <span class="error-msg" id="subjectError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+                <span class="error-msg" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary ripple full-width">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+              </button>
+
+              <div class="form-success" id="formSuccess">
+                ✅ Your message has been sent successfully! I'll get back to you soon.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">Mufeed<span class="dot">.</span></a>
+        <p>Building clean, responsive, and impactful digital experiences.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:#">Email</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-socials">
+        <h4>Follow Me</h4>
+        <div class="footer-social-icons">
+          <a href="#" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.73.8 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.42.36.78 1.08.78 2.18 0 1.57-.02 2.84-.02 3.23 0 .3.2.66.79.55A10.52 10.52 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Email" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M2 4h20a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.01L12 13 22 6.01V6H2zm20 12V8.24l-9.4 6.68a1 1 0 01-1.2 0L2 8.24V18h20z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Muhammad Mufeed. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== SCROLL TO TOP ===================== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
